@@ -1,6 +1,4 @@
-# Surface-Profilometry-Analyzer
 
-"""
 # Surface-Profilometry-Analyzer
 
 Welcome to the Surface-Profilometry-Analyzer repository! This project contains Python programs designed to analyze surface profilometry images. The primary goal is to extract and compute key surface parameters, such as surface roughness and waviness, which are critical in various fields including materials science, engineering, and manufacturing.
