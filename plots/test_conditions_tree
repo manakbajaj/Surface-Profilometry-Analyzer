@@ -1,0 +1,40 @@
+// Test Conditions
+digraph {
+	TC [label="Test Conditions"]
+	CTI [label="CTI Electrodes"]
+	TC -> CTI
+	CTI_Clean [label="Cleaned using 0.1M H2SO4 at a scan range from 0V-1.5V at 0.1V/s"]
+	CTI -> CTI_Clean
+	PCB [label="PCB Electrodes"]
+	TC -> PCB
+	Clean [label="Cleaning Methods"]
+	PCB -> Clean
+	Solvent [label="Solvent Cleaned
+H2O2:NH4OH:H2O at a 1:1:2 ratio for 30 mins, then 1:1 ratio for 30 mins"]
+	Clean -> Solvent
+	Mechanical [label="Mechanically Cleaned
+Using alumina slurry for 5 mins"]
+	Clean -> Mechanical
+	MechSolvent [label="Mechanical + Solvent Cleaned"]
+	Clean -> MechSolvent
+	Slow [label="Slow Scans"]
+	PCB -> Slow
+	Slow_01 [label="0V-1.5V at 0.1M"]
+	Slow -> Slow_01
+	Slow_05 [label="0V-1.5V at 0.5M"]
+	Slow -> Slow_05
+	Fast [label="Fast Scans"]
+	PCB -> Fast
+	Fast_01 [label="0V-1.5V at 0.1M"]
+	Fast -> Fast_01
+	Fast_05 [label="0V-1.5V at 0.5M"]
+	Fast -> Fast_05
+	Fast_02_01 [label="0.2V-1.7V at 0.1M"]
+	Fast -> Fast_02_01
+	Fast_02_05 [label="0.2V-1.7V at 0.5M"]
+	Fast -> Fast_02_05
+	Fast_04_01 [label="0.4V-1.9V at 0.1M"]
+	Fast -> Fast_04_01
+	Fast_04_05 [label="0.4V-1.9V at 0.5M"]
+	Fast -> Fast_04_05
+}

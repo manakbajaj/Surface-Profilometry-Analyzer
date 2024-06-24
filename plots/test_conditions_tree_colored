@@ -1,0 +1,43 @@
+// Test Conditions
+digraph {
+	ratio=fill size="10,10"
+	TC [label="Test Conditions" color="#ff9999" fontcolor=black shape=ellipse style=filled]
+	CTI [label="CTI Electrodes" color="#66b3ff" fontcolor=black shape=ellipse style=filled]
+	TC -> CTI
+	CTI_Clean [label="Cleaned using 0.1M H2SO4
+at a scan range from 0V-1.5V at 0.1V/s" color="#ffcc99" fontcolor=black shape=box style=filled]
+	CTI -> CTI_Clean
+	PCB [label="PCB Electrodes" color="#99ff99" fontcolor=black shape=ellipse style=filled]
+	TC -> PCB
+	Clean [label="Cleaning Methods" color="#ffcc99" fontcolor=black shape=ellipse style=filled]
+	PCB -> Clean
+	Solvent [label="Solvent Cleaned
+H2O2:NH4OH:H2O at a 1:1:2 ratio for 30 mins,
+then 1:1 ratio for 30 mins" color="#c2c2f0" fontcolor=black shape=box style=filled]
+	Clean -> Solvent
+	Mechanical [label="Mechanically Cleaned
+Using alumina slurry for 5 mins" color="#c2c2f0" fontcolor=black shape=box style=filled]
+	Clean -> Mechanical
+	MechSolvent [label="Mechanical + Solvent Cleaned" color="#c2c2f0" fontcolor=black shape=box style=filled]
+	Clean -> MechSolvent
+	Slow [label="Slow Scans" color="#ffcc99" fontcolor=black shape=ellipse style=filled]
+	PCB -> Slow
+	Slow_01 [label="0V-1.5V at 0.1M" color="#ffb3e6" fontcolor=black shape=box style=filled]
+	Slow -> Slow_01
+	Slow_05 [label="0V-1.5V at 0.5M" color="#ffb3e6" fontcolor=black shape=box style=filled]
+	Slow -> Slow_05
+	Fast [label="Fast Scans" color="#ffcc99" fontcolor=black shape=ellipse style=filled]
+	PCB -> Fast
+	Fast_01 [label="0V-1.5V at 0.1M" color="#b3b3ff" fontcolor=black shape=box style=filled]
+	Fast -> Fast_01
+	Fast_05 [label="0V-1.5V at 0.5M" color="#b3b3ff" fontcolor=black shape=box style=filled]
+	Fast -> Fast_05
+	Fast_02_01 [label="0.2V-1.7V at 0.1M" color="#b3ffb3" fontcolor=black shape=box style=filled]
+	Fast -> Fast_02_01
+	Fast_02_05 [label="0.2V-1.7V at 0.5M" color="#b3ffb3" fontcolor=black shape=box style=filled]
+	Fast -> Fast_02_05
+	Fast_04_01 [label="0.4V-1.9V at 0.1M" color="#ffb3b3" fontcolor=black shape=box style=filled]
+	Fast -> Fast_04_01
+	Fast_04_05 [label="0.4V-1.9V at 0.5M" color="#ffb3b3" fontcolor=black shape=box style=filled]
+	Fast -> Fast_04_05
+}
